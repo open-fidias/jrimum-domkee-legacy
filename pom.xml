@@ -31,7 +31,7 @@
 	<scm>
 		<url>http://github.com/jrimum/domkee</url>
 	</scm>
-	
+
 	<developers>
 		<developer>
 			<name>Gilmar P. S. L.</name>
@@ -131,7 +131,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
+<!--			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>2.9.1</version>
@@ -150,21 +150,21 @@
 					<docfilessubdirs>true</docfilessubdirs>
 					<show>private</show>
 		    	</configuration>
-			</plugin>
+			</plugin>-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-deploy-plugin</artifactId>
 				<version>2.8.1</version>
-			</plugin>	
+			</plugin>
 		</plugins>
 	</build>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.jrimum</groupId>
-			<artifactId>jrimum-vallia</artifactId>
-			<version>0.2.3-DEV-SNAPSHOT</version>
-		</dependency>
+        <dependency>
+            <groupId>com.github.open-fidias</groupId>
+            <artifactId>jrimum-vallia-legacy</artifactId>
+            <version>0.2.3</version>
+        </dependency>
 		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -185,26 +185,11 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
+
 	<repositories>
 		<repository>
-			<id>jrimum.org</id>
-			<url>http://jrimum.org/maven/content/groups/public/</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
 	</repositories>
-	
-	<distributionManagement>
-		<snapshotRepository>
-			<id>org.jrimum.snapshots</id>
-			<url>http://jrimum.org/maven/content/repositories/org.jrimum.snapshots/</url>
-		</snapshotRepository>
-		<repository>
-			<id>org.jrimum.releases</id>
-			<url>http://jrimum.org/maven/content/repositories/org.jrimum.releases/</url>
-		</repository>
-	</distributionManagement>
-	
 </project>
